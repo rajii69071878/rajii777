@@ -1,0 +1,60 @@
+<html>
+    <head>
+      <title>employe details</title>
+
+    </head>
+    <body>
+        employee name:<input type="text"  name="em" placeholder="enter name" id="em"><br><br>
+        employee salary:<input type = "text" name="sl" placeholder="slary" id ="sl"><br><br>
+        client:<input type="text"  name= "ct" placeholder="client name" id="ct"><br><br>
+        project:<input type="text" name="pt" placeholder="entere project" id="pt"><br><br>
+        <button onclick="add()">addon</button><br><br>
+        <button color:red; onclick="del()">delete</button><br><br>
+
+
+        <table border="1" width=50%  id ="table">
+        
+           
+                <th>ename</th>
+                <th>salary</th>
+                <th>client</th>
+                <th>project</th>
+           
+
+        <tbody style="text-align: center;">
+                <tr>
+                    <td>rajii</td>
+                    <td>700000</td>
+                    <td>ab</td>
+                    <td>srm</td>
+                </tr>
+            </tbody>
+        </table >
+
+        <script>
+            function add(){
+             var ename = document.getElementById("em").value;
+             var salary = document.getElementById("sl").value;
+             var client = document.getElementById("ct").value;
+             var project = document.getElementById("pt").value;
+
+             var table = document.getElementsById("table")[0];
+
+             var newRow = table.insertRow(table.rows.length);
+
+             var cel1= newRow.insertcell(0);
+             var cel2= newRow.insertcell(1);
+             var cel3= newRow.insertcell(2);
+             var cel4= newRow.insertcell(3);
+
+              cel1.innerHTML =  ename;
+               cel2.innerHTML = salary;
+               cel3.innerHTML =  client;
+              cel4.innerHTML = project;
+            }
+
+        </script>
+    </body>
+
+    
+</html>
